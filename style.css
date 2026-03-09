@@ -1,0 +1,175 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+:root{
+  --primary-color: #937052;
+  --secondary-color: #c1a78a;
+  --background-color: #f5f5f5;
+  --text-color: #333;
+  --light-text: #888;
+  --white: #ffffff;
+  --border-color: #ddd;
+}
+
+body {
+	background: var(--background-color);
+	height: 100vh;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	height: 100vh;
+}
+
+/* LEFT SIDE */
+
+.left {
+	flex: 1;
+	/* background: var(--background-color); */
+	/* background image */
+	background: url('images/background1.png') no-repeat center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.logo h1 {
+	font-size: 120px;
+	font-weight: 700;
+	letter-spacing: 5px;
+}
+
+.logo h2 {
+	letter-spacing: 8px;
+	font-weight: 500;
+	margin-top: -10px;
+}
+
+.logo p {
+	letter-spacing: 8px;
+	font-size: 14px;
+}
+
+.tagline {
+	margin-top: 400px;
+	text-align: center;
+	color: var(--primary-color);
+	font-size: 14px;
+}
+
+.lines {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+}
+
+.lines span {
+	width: 30px;
+	height: 3px;
+	background: var(--secondary-color);
+	display: block;
+}
+.active-line {
+	background: var(--primary-color);
+}
+
+/* RIGHT SIDE */
+
+.right {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.login-card {
+	width: 380px;
+	background: white;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.login-card h2 {
+	text-align: center;
+	font-weight: 600;
+}
+
+.subtitle {
+	text-align: center;
+	font-size: 13px;
+	color: var(--light-text);
+	margin-bottom: 25px;
+}
+
+form label {
+	font-size: 14px;
+	margin-top: 10px;
+	display: block;
+}
+
+form input {
+	width: 100%;
+	padding: 10px;
+	margin-top: 6px;
+	border: 1px solid var(--border-color);
+	border-radius: 6px;
+	outline: none;
+}
+
+.password-box {
+	position: relative;
+}
+
+.eye {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.forgot {
+	display: block;
+	text-align: right;
+	font-size: 12px;
+	margin: 10px 0 20px;
+	color: var(--light-text);
+	text-decoration: none;
+}
+
+button {
+	width: 100%;
+	padding: 12px;
+	background: var(--primary-color);
+	border: none;
+	border-radius: 6px;
+	color: white;
+	font-weight: 500;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+button:hover {
+	background: var(--secondary-color);
+}
+
+.input-border{
+	border: 2px solid var(--primary-color);
+	border-radius: 5px;
+}
+.text-primary{
+	color: var(--primary-color);
+}
+.text-bold{
+	font-weight: 600;
+}
