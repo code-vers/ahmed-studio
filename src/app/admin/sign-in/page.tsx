@@ -76,7 +76,7 @@ export default function SignIn() {
 						</div>
 						<div className="mb-6 text-center text-main">
 							<Link
-								href="/forgot-password"
+								href="forgot-password"
 								className="text-main hover:underline"
 							>
 								Forget Password?

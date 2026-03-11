@@ -12,9 +12,8 @@ export interface DashboardCardData {
   id: string;
   title: string;
   count: number;
-  subtitle: string;
   icon: React.ComponentType<{ className?: string }>;
-  cardColor: string;
+  secondaryIcon: React.ComponentType<{ className?: string }>;
   href: string;
 }
 

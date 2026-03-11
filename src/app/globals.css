@@ -6,6 +6,7 @@
 
 :root {
   --main: #937052;
+  --normal: #fff3e7;
   --secondary: oklch(0.97 0 0);
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -47,6 +48,7 @@
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --color-main: var(--main);
+  --color-normal: var(--normal);
   --color-secondary: var(--secondary)
 ;
   --color-sidebar-ring: var(--sidebar-ring);
