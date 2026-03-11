@@ -21,6 +21,22 @@ export const DASHBOARD_CARDS: DashboardCardData[] = [
     secondaryIcon: TrendingUp,
     href: "/users",
   },
+  {
+    id: "users3",
+    title: "Total Users",
+    count: 12458,
+    icon: Users,
+    secondaryIcon: TrendingUp,
+    href: "/users",
+  },
+  {
+    id: "users4",
+    title: "Total Users",
+    count: 12458,
+    icon: Users,
+    secondaryIcon: TrendingUp,
+    href: "/users",
+  },
   // {
   //   id: "storage",
   //   title: "Total Storage Used",
