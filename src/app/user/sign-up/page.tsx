@@ -50,8 +50,8 @@ export default function SignUp() {
 						Create an account
 					</h1>
 					<form onSubmit={handleSubmit} className="mt-4 text-main">
-						<div className="mb-4">
-							<label className="block font-medium mb-2">Name *</label>
+						<div className="mb-3">
+							<label className="block font-medium mb-1">Name *</label>
 							<input
 								type="text"
 								placeholder="Enter your name..."
@@ -61,8 +61,8 @@ export default function SignUp() {
 								required
 							/>
 						</div>
-						<div className="mb-4">
-							<label className="block font-medium mb-2">Email *</label>
+						<div className="mb-3">
+							<label className="block font-medium mb-1">Email *</label>
 							<input
 								type="email"
 								placeholder="Enter your mail address..."
@@ -72,7 +72,7 @@ export default function SignUp() {
 								required
 							/>
 						</div>
-						<div className="mb-4">
+						<div className="mb-3">
 							<label className="block font-medium mb-2">Phone Number *</label>
 							<input
 								type="text"
@@ -83,8 +83,8 @@ export default function SignUp() {
 								required
 							/>
 						</div>
-						<div className="mb-4">
-							<label className="block font-medium mb-2">Password *</label>
+						<div className="mb-3">
+							<label className="block font-medium mb-1">Password *</label>
 							<div className="relative">
 								<input
 									type={showPassword ? "text" : "password"}
@@ -103,8 +103,8 @@ export default function SignUp() {
 								</button>
 							</div>
 						</div>
-						<div className="mb-4">
-							<label className="block font-medium mb-2">
+						<div className="mb-3">
+							<label className="block font-medium mb-1">
 								Confirm Password *
 							</label>
 							<div className="relative">
@@ -129,7 +129,7 @@ export default function SignUp() {
 								</button>
 							</div>
 						</div>
-						<div className="mb-6 text-center text-main flex items-center justify-start">
+						<div className="mb-4 text-center text-main flex items-center justify-start">
 							<input
 								type="checkbox"
 								className="mr-2 h-4 w-4 accent-main"

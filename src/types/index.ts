@@ -11,7 +11,7 @@ export interface NavItem {
 export interface DashboardCardData {
   id: string;
   title: string;
-  count: number;
+  count: string | number;
   icon: React.ComponentType<{ className?: string }>;
   secondaryIcon: React.ComponentType<{ className?: string }>;
   href: string;

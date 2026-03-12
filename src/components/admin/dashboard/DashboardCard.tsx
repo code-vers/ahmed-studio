@@ -12,10 +12,10 @@ export function DashboardCard({ data, onClick }: DashboardCardProps) {
   // For user, membership, media, subscription, storage, profile, cards, use onClick handler to open modal
   if (
     (data.id === "user" ||
+      data.id === "storage" ||
       data.id === "membership" ||
       data.id === "media" ||
       data.id === "subscription" ||
-      data.id === "storage" ||
       data.id === "profile" ||
       data.id === "cards") &&
     onClick
