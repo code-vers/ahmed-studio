@@ -4,17 +4,17 @@ export default function Navigation() {
 	return (
 		<nav className="hidden lg:flex space-x-6 text-black/50 text-lg">
 			{[
-				{ name: "Home", active: true },
-				{ name: "About Us" },
-				{ name: "Order" },
-				{ name: "Consultant" },
-				{ name: "Cloud Storage" },
-				{ name: "Subscription" },
-				{ name: "Our Lab" },
+				{ name: "Home", goTo: "#", active: true },
+				{ name: "About Us", goTo: "#" },
+				{ name: "Order", goTo: "#" },
+				{ name: "Consultant", goTo: "#" },
+				{ name: "Cloud Storage", goTo: "#" },
+				{ name: "Subscription", goTo: "#" },
+				{ name: "Our Lab", goTo: "website/our-lab" },
 			].map((item) => (
 				<Link
 					key={item.name}
-					href="#"
+					href={item.goTo}
 					className={`
                             relative inline-flex flex-col items-center justify-center
                             transition-colors duration-300

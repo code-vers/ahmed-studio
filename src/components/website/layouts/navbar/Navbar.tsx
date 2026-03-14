@@ -5,8 +5,13 @@ import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "./Nagivation";
 import SigninSignup from "./SigninSignup";
+import Link from "next/link";
 
-export function Navbar() {
+interface NavbarProps {
+  onMenuToggle: () => void;
+}
+
+export function Navbar({ onMenuToggle}: NavbarProps) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
@@ -39,22 +44,22 @@ export function Navbar() {
 				<div className="lg:hidden bg-white border-t absolute top-16 left-0 w-full shadow-lg transition-all duration-300">
 					<nav className="flex flex-col p-4 space-y-4">
 						{[
-							{ name: "Home", active: true },
-							{ name: "About Us" },
-							{ name: "Order" },
-							{ name: "Consultant" },
-							{ name: "Cloud Storage" },
-							{ name: "Subscription" },
-							{ name: "Our Lab" },
+							{ name: "Home", goTo:"#", active: true },
+							{ name: "About Us", goTo:"#"},
+							{ name: "Order", goTo:"#" },
+							{ name: "Consultant", goTo:"#"},
+							{ name: "Cloud Storage", goTo:"#" },
+							{ name: "Subscription", goTo:"#" },
+							{ name: "Our Lab", goTo:"website/our-lab" },
 						].map((item) => (
-							<a
+							<Link
 								key={item.name}
-								href="#"
+								href={item.goTo}
 								className={`text-lg ${item.active ? "text-main font-bold" : "text-black/70"}`}
 								onClick={() => setIsOpen(false)}
 							>
 								{item.name}
-							</a>
+							</Link>
 						))}
 					</nav>
 				</div>
