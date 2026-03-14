@@ -7,7 +7,7 @@ import TruckIcon from "@/icons/TruckIcon";
 
 export default function HowItWorks() {
 	return (
-		<section className="container mx-auto px-4 py-10">
+		<section className="w-[85%] mx-auto px-4 py-10">
 			<p className="pb-10 text-main font-semibold text-3xl md:text-4xl text-center w-full">
 				How It Works
 			</p>

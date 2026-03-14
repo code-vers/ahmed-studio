@@ -11,7 +11,7 @@ export function WebLayout({ children }: WebLayoutProps) {
 	const [isNavbarOpen, setIsNavbarOpen] = useState(false);
 
 	return (
-		<main className="container w-[90%] mx-auto min-h-screen sm:px-6 lg:px-8 py-6">
+		<main className="w-full min-h-screen">
 			<Navbar onMenuToggle={() => setIsNavbarOpen((prev) => !prev)} />
 			<div className="">{children}</div>
 		</main>

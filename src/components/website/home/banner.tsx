@@ -1,6 +1,6 @@
 export default function Banner() {
 	return (
-		<section className="md:px-0 my-10">
+		<section className="w-[85%] mx-auto  md:px-0 my-10">
 			<div
 				className="relative overflow-hidden rounded-xl bg-cover bg-center bg-no-repeat h-180 flex items-center justify-center text-center p-6"
 				style={{

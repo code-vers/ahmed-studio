@@ -10,7 +10,7 @@ export function Navbar() {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-		<header className=" sticky top-0 z-50 bg-white border-b">
+		<header className="w-[90%] mx-auto sticky top-0 z-50 bg-white">
 			<div className="flex h-16 items-center justify-between px-4 lg:px-10">
 				{/* Mobile Menu Button */}
 				<Button

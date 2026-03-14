@@ -6,7 +6,7 @@ import CoreServices from "./CoreServices";
 export default function Content() {
 	return (
 		<>
-			<section className="flex flex-col md:flex-row items-center gap-10 my-10 md:my-20 px-4 md:px-0 container mx-auto">
+			<section className="w-[85%] mx-auto  flex flex-col md:flex-row items-center gap-10 my-10 md:my-20 px-4 md:px-0 container mx-auto">
 				{/* Image Container */}
 				<div className="w-full md:flex-1">
 					<Image
@@ -49,9 +49,11 @@ export default function Content() {
 			<CoreServices />
 
 			{/* Supported Formats  */}
-			{/* <section className="bg-normal">
+			<section className="w-full bg-normal ">
+				<div className="w-[85%] mx-auto">
 
-			</section> */}
+				</div>
+			</section>
 
 
 			

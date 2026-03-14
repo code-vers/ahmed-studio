@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default function CoreServices() {
 	return (
-		<section className="container mx-auto px-4 py-10">
+		<section className="w-[85%]  mx-auto px-4 py-10">
 			<div className="py-10 text-center w-full">
 				<p className=" text-main font-semibold text-3xl md:text-4xl ">
 					Core Services
