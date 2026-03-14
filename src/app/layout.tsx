@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Ahmed Studion",
+  title: "Ahmed Studio",
   description: "Ahmed studio",
   icons: {
     icon: "/logo.png",       

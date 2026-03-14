@@ -8,8 +8,7 @@ export default function HomeComponent() {
 		<section className="mt-6">
 			<Banner />
             <Content />
-            <HowItWorks/>
-			<CoreServices/>
+            
 		</section>
 	);
 }
