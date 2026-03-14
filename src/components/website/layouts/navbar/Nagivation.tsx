@@ -10,7 +10,7 @@ export default function Navigation() {
 				{ name: "Consultant", goTo: "#" },
 				{ name: "Cloud Storage", goTo: "#" },
 				{ name: "Subscription", goTo: "#" },
-				{ name: "Our Lab", goTo: "website/our-lab" },
+				{ name: "Our Lab", goTo: "our-lab" },
 			].map((item) => (
 				<Link
 					key={item.name}
