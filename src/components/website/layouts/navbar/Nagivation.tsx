@@ -4,8 +4,8 @@ export default function Navigation() {
 	return (
 		<nav className="hidden lg:flex space-x-6 text-black/50 text-lg">
 			{[
-				{ name: "Home", goTo: "#", active: true },
-				{ name: "About Us", goTo: "#" },
+				{ name: "Home", goTo: "/", active: true },
+				{ name: "About Us", goTo: "about-us" },
 				{ name: "Order", goTo: "#" },
 				{ name: "Consultant", goTo: "#" },
 				{ name: "Cloud Storage", goTo: "#" },
