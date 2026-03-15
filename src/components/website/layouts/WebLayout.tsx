@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Footer from "./footer/Footer";
 import { Navbar } from "./navbar/Navbar";
 
@@ -8,11 +9,15 @@ interface WebLayoutProps {
 }
 
 export function WebLayout({ children }: WebLayoutProps) {
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
   return (
     <main className='w-full min-h-screen'>
-      <Navbar />
-      <div>{children}</div>
+      <Navbar onMenuToggle={() => setIsNavbarOpen((prev) => !prev)} />
+      <div className=''>{children}</div>
       <Footer />
     </main>
   );
 }
+
+// container  px-4
