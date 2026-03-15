@@ -1,9 +1,14 @@
+"use client"
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import RequestQuoteDialog from "./RequestQuoteDialog";
+import { useState } from "react";
 
 export default function ServicesComponent() {
+     const [openDialog, setOpenDialog] = useState(false);
+     
 	return (
 		<>
 			<section className="w-full py-12">
@@ -307,13 +312,18 @@ export default function ServicesComponent() {
 						</Card>
 					</div>
 					<div className="flex items-center justify-center w-full py-15 ">
-						<Link
-							href="#"
+						<button 
+                            onClick={() => setOpenDialog(true)}
 							className="py-2 px-10 bg-main rounded-sm text-white hover:bg-main/90"
 						>
 							Request A Quote
-						</Link>
+						</button>
 					</div>
+                    {/* Request Quote dialog */}
+                     <RequestQuoteDialog
+                        open={openDialog}
+                        onOpenChange={setOpenDialog}
+                    />
 				</div>
 			</section>
 		</>
