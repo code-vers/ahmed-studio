@@ -26,7 +26,7 @@ const WhyWeAreTrustedSection = () => {
     { icon: <FiStar />, title: "Excellent Client Experience" },
   ];
 
-  const Card = ({ icon, title }) => (
+  const Card = ({ icon, title }: { icon: React.ReactNode; title: string }) => (
     <div className='flex min-h-[180px] sm:min-h-[220px] md:min-h-[320px] w-full flex-col items-center justify-center rounded-[14px] bg-[#EEE8E2] px-3 sm:px-4 pt-6 sm:pt-8 md:pt-10 text-center'>
       <div className='flex h-[64px] w-[64px] sm:h-[80px] sm:w-[80px] md:h-[100px] md:w-[100px] items-center justify-center rounded-[6px] bg-[#B9926C] text-[28px] sm:text-[34px] md:text-[42px] text-white'>
         {icon}
