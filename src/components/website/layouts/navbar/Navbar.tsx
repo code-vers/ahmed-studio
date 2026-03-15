@@ -1,69 +1,95 @@
 "use client";
+
+import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
-import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
+
 import Navigation from "./Nagivation";
 import SigninSignup from "./SigninSignup";
-import Link from "next/link";
 
 interface NavbarProps {
-  onMenuToggle: () => void;
+  onMenuToggle?: () => void;
 }
 
-export function Navbar({ onMenuToggle}: NavbarProps) {
-	const [isOpen, setIsOpen] = useState(false);
+// Shared nav items for mobile menu
+const navItems = [
+  { name: "Home", goTo: "/" },
+  { name: "About Us", goTo: "/about-us" },
+  { name: "Order", goTo: "/order" },
+  { name: "Consultant", goTo: "/consultant" },
+  { name: "Cloud Storage", goTo: "/cloud-storage" },
+  { name: "Subscription", goTo: "/subscription" },
+  { name: "Our Lab", goTo: "/our-lab" },
+];
 
-	return (
-		<header className="w-[90%] mx-auto sticky top-0 z-50 bg-white">
-			<div className="flex h-16 items-center justify-between px-4 lg:px-10">
-				{/* Mobile Menu Button */}
-				<Button
-					variant="ghost"
-					size="icon"
-					onClick={() => setIsOpen(!isOpen)}
-					className="lg:hidden text-black"
-				>
-					{isOpen ? <X /> : <Menu />}
-				</Button>
+export function Navbar({ onMenuToggle }: NavbarProps) {
+  // Mobile menu open/close state
+  const [isOpen, setIsOpen] = useState(false);
 
-				{/* Logo - hide in mobil */}
-				<div className={`${isOpen ? "hidden" : "block"} lg:block`}>
-					<Logo />
-				</div>
+  // Get current route
+  const pathname = usePathname();
 
-				{/* Desktop Navigation */}
-				<Navigation />
+  // Handle menu toggle
+  const handleMenuToggle = () => {
+    setIsOpen((prev) => !prev);
+    onMenuToggle?.();
+  };
 
-				{/* SigninSignup - altime visible */}
-				<SigninSignup />
-			</div>
+  return (
+    <header className='w-[90%] mx-auto sticky top-0 z-50 bg-white'>
+      {/* Navbar container */}
+      <div className='flex h-16 items-center justify-between px-4 lg:px-10'>
+        {/* Mobile menu button */}
+        <Button
+          variant='ghost'
+          size='icon'
+          onClick={handleMenuToggle}
+          className='lg:hidden text-black'>
+          {isOpen ? <X /> : <Menu />}
+        </Button>
 
-			{/* Mobile Dropdown Menu */}
-			{isOpen && (
-				<div className="lg:hidden bg-white border-t absolute top-16 left-0 w-full shadow-lg transition-all duration-300">
-					<nav className="flex flex-col p-4 space-y-4">
-						{[
-							{ name: "Home", goTo:"#", active: true },
-							{ name: "About Us", goTo:"#"},
-							{ name: "Order", goTo:"#" },
-							{ name: "Consultant", goTo:"#"},
-							{ name: "Cloud Storage", goTo:"#" },
-							{ name: "Subscription", goTo:"#" },
-							{ name: "Our Lab", goTo:"website/our-lab" },
-						].map((item) => (
-							<Link
-								key={item.name}
-								href={item.goTo}
-								className={`text-lg ${item.active ? "text-main font-bold" : "text-black/70"}`}
-								onClick={() => setIsOpen(false)}
-							>
-								{item.name}
-							</Link>
-						))}
-					</nav>
-				</div>
-			)}
-		</header>
-	);
+        {/* Logo (hidden when mobile menu open) */}
+        <div className={`${isOpen ? "hidden" : "block"} lg:block`}>
+          <Logo />
+        </div>
+
+        {/* Desktop navigation */}
+        <Navigation />
+
+        {/* Sign in / Sign up buttons */}
+        <SigninSignup />
+      </div>
+
+      {/* Mobile dropdown navigation */}
+      {isOpen && (
+        <div className='lg:hidden bg-white border-t absolute top-16 left-0 w-full shadow-lg transition-all duration-300'>
+          <nav className='flex flex-col p-4 space-y-4'>
+            {navItems.map((item) => {
+              // Check active route
+              const isActive = pathname === item.goTo;
+
+              return (
+                <Link
+                  key={item.name}
+                  href={item.goTo}
+                  // Active route style
+                  className={`text-lg ${
+                    isActive
+                      ? "text-main font-bold"
+                      : "text-black/70 hover:text-main"
+                  }`}
+                  // Close menu when clicking link
+                  onClick={() => setIsOpen(false)}>
+                  {item.name}
+                </Link>
+              );
+            })}
+          </nav>
+        </div>
+      )}
+    </header>
+  );
 }
