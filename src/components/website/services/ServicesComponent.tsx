@@ -13,7 +13,7 @@ export default function ServicesComponent() {
 		<>
 			<section className="w-full py-12">
 				<div className="w-[85%] mx-auto">
-					<div className="relative h-140 w-full overflow-hidden rounded-lg">
+					<div className="relative h-140 w-full overflow-hidden rounded-xl">
 						<Image
 							src="/images/website/services/banner.png"
 							alt="Preserving memories"
@@ -314,7 +314,7 @@ export default function ServicesComponent() {
 					<div className="flex items-center justify-center w-full py-15 ">
 						<button 
                             onClick={() => setOpenDialog(true)}
-							className="py-2 px-10 bg-main rounded-sm text-white hover:bg-main/90"
+							className="py-2 px-10 bg-main rounded-sm text-white hover:bg-main/90 hover:cursor-pointer"
 						>
 							Request A Quote
 						</button>
