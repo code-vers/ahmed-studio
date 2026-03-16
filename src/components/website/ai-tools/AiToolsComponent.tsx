@@ -49,7 +49,7 @@ export default function AiToolsComponent() {
 						{/* Content */}
 						<div className="md:col-span-4">
 							<h2 className="text-3xl md:text-6xl font-semibold text-[#7A5C1E] mb-6">
-								Yesterday’s tools captured your stories
+								Yesterday's tools captured your stories
 							</h2>
 
 							<p className="text-gray-600 mb-6 leading-relaxed">

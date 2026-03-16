@@ -1,3 +1,4 @@
+import { CircleCheck } from "lucide-react";
 import Image from "next/image";
 import { FiCheck } from "react-icons/fi";
 
@@ -6,27 +7,39 @@ export default function SubscriptionComponent() {
 		{
 			name: "Trial Plan",
 			price: "£0",
-			desc: "Experience the magic of your digital history.",
+			desc: "Try The Experience",
 			features: [
-				"Secure 5GB Storage",
-				"14 Days of Free Access",
-				"4 free guest accounts",
-				"Multi-Device Streaming",
-				"Global Sharing",
+				"10 days access(one time)",
+				"10 GB storage",
+				"High-quality playback",
+				"Media sharing",
+				"Media download",
+				"Up to 4 guest users",
+				"AS App (IOS/Android/Web)",
+				"AI tagging",
+				"Metadata viewing",
+				"5 Classic Cartoons & Series",
 			],
 			highlight: false,
 		},
 		{
-			name: "Standard Cloud",
+			name: "Standard",
 			price: "£24",
-			desc: "Secure, long-term hosting for home movies.",
+			desc: "Best For Personal Archives",
 			features: [
-				"Secure 10GB storage",
-				"AI Tagging & Indexing",
-				"Deep Search Functionality",
-				"Multi-Platform Access",
-				"Extended Hosting",
+				"30 days access",
+				"10 GB storage",
+				"Cloud Video Playback",
+				"High-Quality Playback",
+				"Media Sharing",
+				"Up to 4 Guest Users",
+				"AS App (IOS/Android/Web)",
+				"AI tagging",
+				"Metadata Management",
+				"Classic Cartoons & Series",
+				"Additional Storage(10GB/9SAR)",
 			],
+
 			highlight: true,
 		},
 		{
@@ -34,11 +47,22 @@ export default function SubscriptionComponent() {
 			price: "£100",
 			desc: "Enterprise-grade preservation for large collections.",
 			features: [
-				"Secure 20GB + Storage",
-				"RFP Development Support",
-				"Comprehensive Archive",
-				"Test Digitization Samples",
-				"Unlimited Sharing",
+				"30 days access",
+				"10 GB storage",
+				"Content Upload",
+				"Cloud Video Playback",
+				"High-Quality Playback",
+				"Media Sharing",
+				"Media Download",
+				"Up to 4 Guest Users",
+				"AS App (IOS/Android/Web)",
+				"AI tagging",
+				"AI Indexing",
+				"Metadata Management",
+				"Classic Cartoons & Series",
+				"5 Photo Restorations",
+				"1 Video Restorations",
+				"Additional Storage(10GB/9SAR)",
 			],
 			highlight: false,
 		},
@@ -106,17 +130,18 @@ export default function SubscriptionComponent() {
 						Subscription Plan
 					</h2>
 
-					<div className="flex flex-wrap items-end justify-center gap-5 md:gap-7">
+					<div className="flex flex-wrap items-stretch justify-center gap-5 md:gap-7">
 						{plans.map((plan) => (
 							<div
 								key={plan.name}
-								className={`flex flex-col justify-between rounded-[14px] transition-all duration-300 ${
+								className={`flex flex-col rounded-2xl transition-all duration-300 ${
 									plan.highlight
-										? "w-full max-w-[320px] border border-black bg-[#FFFBF0] px-6 md:px-8 pt-6 md:pt-7 pb-7 md:pb-8 md:min-h-[470px] md:scale-[1.03]"
-										: "w-full max-w-[320px] bg-[#FFF1CC] px-5 md:px-6 pt-5 md:pt-6 pb-6 md:pb-7 md:min-h-[410px]"
-								}`}
+										? "w-full max-w-[320px] ring ring-black bg-[#FFFBF0] px-6 md:px-8 pt-6 md:pt-7 pb-7 md:pb-8 h-210 md:scale-[1.03]"
+										: "w-full max-w-[320px] bg-[#FFF1CC] px-5 md:px-6 pt-5 md:pt-6 pb-6 md:pb-7 h-200"
+									}`}
 							>
-								<div>
+								{/* Content */}
+								<div className="flex flex-col flex-1">
 									<h3 className="mb-2 text-[16px] md:text-[18px] font-medium text-[#7B5A3B]">
 										{plan.name}
 									</h3>
@@ -131,6 +156,7 @@ export default function SubscriptionComponent() {
 										>
 											{plan.price}
 										</span>
+
 										<span className="ml-2 text-[13px] md:text-[14px] text-[#8A8A8A]">
 											/Month
 										</span>
@@ -139,37 +165,40 @@ export default function SubscriptionComponent() {
 									<p
 										className={`mb-5 leading-[1.35] text-[#7B6E62] ${
 											plan.highlight
-												? "max-w-[280px] text-[14px] md:text-[15px]"
-												: "max-w-[250px] text-[13px] md:text-[14px]"
+												? "max-w-70 text-[14px] md:text-[15px]"
+												: "max-w-70 text-[13px] md:text-[14px]"
 										}`}
 									>
 										{plan.desc}
 									</p>
 
-									<ul className="space-y-[10px] md:space-y-[11px]">
+									{/* Feature List */}
+									<ul className="space-y-2.5 md:space-y-2.75 flex-1 overflow-hidden">
 										{plan.features.map((feature) => (
 											<li
 												key={feature}
-												className={`flex items-center gap-[10px] leading-[1.25] text-[#555555] ${
+												className={`flex items-center gap-2.5 leading-1.25 text-[#555555] ${
 													plan.highlight
 														? "text-[15px] md:text-[16px]"
 														: "text-[14px] md:text-[15px]"
 												}`}
 											>
-												<span className="flex h-[22px] w-[22px] min-w-[22px] items-center justify-center rounded-full bg-[#4C4C4C]">
-													<FiCheck className="text-[13px] text-white stroke-[3]" />
+												<span className="flex h-5.5 w-5.5 min-w-5.5 items-center justify-center rounded-full">
+													<CircleCheck />
 												</span>
+
 												<span>{feature}</span>
 											</li>
 										))}
 									</ul>
 								</div>
 
+								{/* Button */}
 								<button
-									className={`mx-auto mt-8 rounded-[5px] font-semibold text-white ${
+									className={`mt-auto mx-auto rounded-sm font-semibold text-white ${
 										plan.highlight
-											? "h-[42px] px-8 text-[14px] bg-black"
-											: "h-[40px] px-7 text-[13px] md:h-[42px] md:text-[14px] bg-[#937052]"
+											? "h-11 px-8 text-[14px] bg-black mb-10"
+											: "h-10 px-7 text-[13px] md:h-11 md:text-[14px] bg-main"
 									}`}
 								>
 									Buy Plan
