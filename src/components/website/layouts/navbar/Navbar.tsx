@@ -6,7 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import Logo from "./Logo";
-
 import Navigation from "./Nagivation";
 import SigninSignup from "./SigninSignup";
 
@@ -14,7 +13,6 @@ interface NavbarProps {
   onMenuToggle?: () => void;
 }
 
-// Shared nav items for mobile menu
 const navItems = [
   { name: "Home", goTo: "/" },
   { name: "About Us", goTo: "/about-us" },
@@ -26,63 +24,69 @@ const navItems = [
 ];
 
 export function Navbar({ onMenuToggle }: NavbarProps) {
-  // Mobile menu open/close state
   const [isOpen, setIsOpen] = useState(false);
-
-  // Get current route
   const pathname = usePathname();
 
-  // Handle menu toggle
   const handleMenuToggle = () => {
     setIsOpen((prev) => !prev);
     onMenuToggle?.();
   };
 
   return (
-    <header className='w-[90%] mx-auto sticky top-0 z-50 bg-white'>
-      {/* Navbar container */}
-      <div className='flex h-16 items-center justify-between px-4 lg:px-10'>
-        {/* Mobile menu button */}
-        <Button
-          variant='ghost'
-          size='icon'
-          onClick={handleMenuToggle}
-          className='lg:hidden text-black'>
-          {isOpen ? <X /> : <Menu />}
-        </Button>
+    <header className='sticky top-0 z-50 w-full bg-white border-b border-black/5'>
+      <div className='mx-auto w-full max-w-[1440px]'>
+        <div className='flex h-16 items-center justify-between px-4 lg:px-10'>
+          {/* Mobile left: menu + logo */}
+          <div className='flex items-center gap-2 lg:hidden'>
+            <Button
+              variant='ghost'
+              size='icon'
+              onClick={handleMenuToggle}
+              className='h-10 w-10 text-black hover:bg-black/5'>
+              {isOpen ? (
+                <X className='h-5 w-5' />
+              ) : (
+                <Menu className='h-5 w-5' />
+              )}
+            </Button>
 
-        {/* Logo (hidden when mobile menu open) */}
-        <div className={`${isOpen ? "hidden" : "block"} lg:block`}>
-          <Logo />
+            <div className='flex items-center'>
+              <Logo />
+            </div>
+          </div>
+
+          {/* Desktop logo */}
+          <div className='hidden lg:block'>
+            <Logo />
+          </div>
+
+          {/* Desktop navigation */}
+          <Navigation />
+
+          {/* Right side */}
+          <div className='flex items-center'>
+            <SigninSignup />
+          </div>
         </div>
-
-        {/* Desktop navigation */}
-        <Navigation />
-
-        {/* Sign in / Sign up buttons */}
-        <SigninSignup />
       </div>
 
       {/* Mobile dropdown navigation */}
       {isOpen && (
-        <div className='lg:hidden bg-white border-t absolute top-16 left-0 w-full shadow-lg transition-all duration-300'>
-          <nav className='flex flex-col p-4 space-y-4'>
+        <div className='absolute left-0 top-16 w-full border-t border-black/5 bg-white shadow-[0_10px_30px_rgba(0,0,0,0.08)] lg:hidden'>
+          <nav className='mx-auto flex w-full max-w-[1440px] flex-col px-4 py-4'>
             {navItems.map((item) => {
-              // Check active route
               const isActive = pathname === item.goTo;
 
               return (
                 <Link
                   key={item.name}
                   href={item.goTo}
-                  // Active route style
-                  className={`text-lg ${
+                  onClick={() => setIsOpen(false)}
+                  className={`rounded-md px-3 py-3 text-[15px] font-medium transition ${
                     isActive
-                      ? "text-main font-bold"
-                      : "text-black/70 hover:text-main"
-                  }`}
-                  // Close menu when clicking link
-                  onClick={() => setIsOpen(false)}>
+                      ? "bg-main/10 text-main"
+                      : "text-black/75 hover:bg-black/5 hover:text-main"
+                  }`}>
                   {item.name}
                 </Link>
               );
