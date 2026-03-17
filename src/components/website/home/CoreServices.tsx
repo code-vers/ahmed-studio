@@ -139,7 +139,7 @@ export default function CoreServices() {
 			</div>
 			<div className="flex items-center justify-center w-full py-15 ">
 				<Link
-					href="#"
+					href="services"
 					className="py-2 px-10 bg-main rounded-sm text-white hover:bg-main/90"
 				>
 					View All Services
