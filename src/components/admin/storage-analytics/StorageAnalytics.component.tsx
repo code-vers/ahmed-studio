@@ -54,15 +54,17 @@ export default function StorageAnalyticsComponent() {
 			<h2 className="text-3xl font-normal pb-4">Storage Analytics</h2>
 
 			{/* ================= CHART ================= */}
-			<div className="bg-white border border-[#caa57b] rounded-xl p-5 mb-6">
+			{/* ================= CHART ================= */}
+			<div className="mb-6">
 				<h3 className="text-sm mb-4">Storage Growth Over Time</h3>
 
 				<div className="w-full h-[250px]">
 					<ResponsiveContainer>
 						<BarChart data={chartData}>
-							<XAxis dataKey="name" />
-							<YAxis />
-							<Tooltip />
+							<XAxis dataKey="name" axisLine={false} tickLine={false} />
+							<YAxis axisLine={false} tickLine={false} />
+							<Tooltip cursor={{ fill: "transparent" }} />
+
 							<Bar dataKey="value" radius={[6, 6, 0, 0]} fill="#E9A86D" />
 						</BarChart>
 					</ResponsiveContainer>
