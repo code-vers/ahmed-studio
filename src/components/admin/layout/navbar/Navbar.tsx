@@ -9,7 +9,7 @@ interface NavbarProps {
 
 export function Navbar({ onMenuToggle }: NavbarProps) {
 	return (
-		<header className="sticky top-0 z-20 flex h-16 items-center justify-between px-4 sm:px-6">
+		<header className="sticky top-0 z-20 flex h-16 items-center justify-between px-4 sm:px-6 bg-normal py-2">
 			{/* Left section: hamburger + title */}
 			<div className="flex w-1/2 items-center gap-3">
 				{/* Mobile hamburger button */}
