@@ -58,7 +58,7 @@ export default function StorageAnalyticsComponent() {
 			<div className="mb-6">
 				<h3 className="text-sm mb-4">Storage Growth Over Time</h3>
 
-				<div className="w-full h-[250px]">
+				<div className="w-full h-62.5">
 					<ResponsiveContainer>
 						<BarChart data={chartData}>
 							<XAxis dataKey="name" axisLine={false} tickLine={false} />
