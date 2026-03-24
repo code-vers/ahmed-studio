@@ -9,7 +9,7 @@ const MessageSection = () => {
           
           {/* Left Image */}
           <div className="md:w-1/2 w-full">
-            <div className="border-2  p-1">
+            <div className="  p-1">
               <Image
                 src={films}
                 alt="films"
@@ -20,7 +20,7 @@ const MessageSection = () => {
 
           {/* Right Content */}
           <div className="md:w-1/2 w-full md:pl-12 mt-8 md:mt-0">
-            <div className="border-2 p-8">
+            <div className=" p-8">
               
               <h2 className="heading mb-4">
       We’ve streamlined <br />
