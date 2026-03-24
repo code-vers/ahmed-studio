@@ -5,23 +5,24 @@ const FilmSection = () => {
   return (
     <section className="bg-[#e9e1d8] py-16 mt-16 px-4">
       <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center">
-          
+        <div className="flex flex-col md:flex-row items-stretch">
+
           {/* Left Image */}
           <div className="md:w-1/2 w-full">
-            <div className="  p-1">
+            <div className="relative w-full h-full min-h-[400px]">
               <Image
                 src={films}
                 alt="films"
-                className="w-full rounded-2xl h-full object-cover"
+                fill
+                className="rounded-2xl object-cover"
               />
             </div>
           </div>
 
           {/* Right Content */}
           <div className="md:w-1/2 w-full md:pl-12 mt-8 md:mt-0">
-            <div className=" p-8">
-              
+            <div className="p-8 h-full flex flex-col justify-center">
+
               <h2 className="heading mb-4">
                 Once your <br /> films are digitized
               </h2>
