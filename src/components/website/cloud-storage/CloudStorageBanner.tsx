@@ -3,8 +3,8 @@ import bannerImg from '../../../../public/images/website/cloud-storage/banner.jp
 
 const CloudStorageBanner = () => {
   return (
-    <div className='px-28 pb-16 pt-4 mx-auto '>
-      <Image src={bannerImg} className='max-h-[80vh] rounded-3xl ' alt='banner'/>
+    <div className='px-28 lg:max-w-[80%] mx-auto pb-16 pt-4  '>
+      <Image src={bannerImg} className='max-h-[80vh] mx-auto  rounded-3xl ' alt='banner'/>
     </div>
   );
 };
