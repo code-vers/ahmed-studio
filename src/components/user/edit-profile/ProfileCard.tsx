@@ -15,7 +15,7 @@ export default function ProfileCard({ name, email, onEdit }: Props) {
 			<div className="flex items-center gap-4">
 				<div className="relative h-25 w-25">
 					<Image
-						src="/images/users/user-avatar.png"
+						src="/images/users/user11.jpg"
 						alt="avatar"
 						fill
 						className="rounded-full object-cover "
