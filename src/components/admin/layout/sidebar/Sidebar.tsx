@@ -1,7 +1,6 @@
 "use client";
 
-import { LogIn, LogOut } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
+import { LogIn } from "lucide-react";
 import { SidebarLogo } from "./SidebarLogo";
 import { SidebarNavItem } from "./SidebarNavItem";
 import { SIDEBAR_NAV_ITEMS } from "@/components/admin/constants/navigation";
@@ -59,7 +58,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 				{/* Logout */}
 				<button
 					type="button"
-					onClick={() => (window.location.href = "/login")}
+					onClick={() => (window.location.href = "logout")}
 					className="flex items-center justify-center gap-2 py-1  font-medium text-red-600 ring ring-red-600 transition-colors hover:text-white hover:bg-red-600 rounded-sm mx-3 mb-4 "
 				>
 					<LogIn className="h-5 w-5" />

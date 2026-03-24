@@ -20,7 +20,7 @@ export default function ProfileCard({ name, email, onEdit }: Props) {
 						fill
 						className="rounded-full object-cover "
 					/>
-					<button className="absolute bottom-0 right-0 bg-main text-white w-6 h-6 rounded-full text-xs flex items-center justify-center p-1">
+					<button className="absolute bottom-0 right-2 bg-main text-white w-6 h-6 rounded-full text-xs flex items-center justify-center p-1">
 						<Plus />
 					</button>
 				</div>

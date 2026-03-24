@@ -30,7 +30,6 @@ export default function EditProfileCard({
 
 	return (
 		<div className="bg-white rounded-2xl border border-secondary shadow-sm p-6 mt-6">
-			<h3 className="text-2xl font-medium text-main mb-6">Edit Profile</h3>
 
 			{/* Avatar */}
 			<div className="flex justify-center mb-6">
@@ -41,7 +40,7 @@ export default function EditProfileCard({
 						fill
 						className="rounded-full object-cover"
 					/>
-					<button className="absolute bottom-0 right-0 bg-main text-white w-6 h-6 rounded-full flex items-center justify-center">
+					<button className="absolute bottom-0 right-2 bg-main text-white w-6 h-6 rounded-full flex items-center justify-center">
 						<Plus className="w-3 h-3" />
 					</button>
 				</div>

@@ -1,95 +1,71 @@
 import { Card, CardContent } from "@/components/ui/card";
-import CloudUplodCustomIcon from "@/icons/CloudUplodCustomIcon";
-import DigitizationIcon from "@/icons/DigitizationIcon";
-import OrderIcon from "@/icons/OrderIcon";
-import SafelyReturnIcon from "@/icons/SafelyReturnIcon";
-import TruckIcon from "@/icons/TruckIcon";
+import { BadgeCheck, Globe, RefreshCw, Wrench } from "lucide-react";
 
-export default function HowItWorks() {
-	return (
-		<section className="w-[85%] mx-auto px-4 py-10">
-			<p className="pb-10 text-main font-semibold text-3xl md:text-4xl text-center w-full">
-				How It Works
-			</p>
+const features = [
+  {
+    title: "High\nQuality",
+    description: "Outputs built to last and exceed industry standards.",
+    icon: BadgeCheck,
+  },
+  {
+    title: "Clear\nDocumentation",
+    description: "Clear logs and documentation for every project step.",
+    icon: Wrench,
+  },
+  {
+    title: "International\nStandards",
+    description: "Expert processes aligned with international benchmarks.",
+    icon: Globe,
+  },
+  {
+    title: "Project\nLifecycle",
+    description: "Smooth, disciplined management from start to finish.",
+    icon: RefreshCw,
+  },
+];
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-				{/* Card 1: Place an order */}
-				<Card className="bg-normal border-0 ring-0 h-full">
-					<CardContent className="flex flex-col items-center p-6">
-						<div className="flex items-center justify-center h-20 w-20 bg-main rounded-xl shadow-lg">
-							<OrderIcon className="text-white w-10 h-10" />
-						</div>
-						<h2 className="text-xl text-main font-semibold py-4 text-center">
-							Place an order
-						</h2>
-						<p className="text-sm text-center">
-							Place an order from our store/whatsapp.
-						</p>
-					</CardContent>
-				</Card>
+export default function WhyAhmedStudioConsulting() {
+  return (
+    <section className='w-full bg-[#f6f4f1] py-14 md:py-16'>
+      <div className='mx-auto w-[90%] max-w-[1120px]'>
+        <h2 className='text-center text-[28px] font-semibold leading-tight text-[#8b6524] md:text-[40px]'>
+          Why Ahmed Studio Consulting?
+        </h2>
 
-				{/* Card 2: Shipment */}
-				<Card className="bg-normal border-0 ring-0 h-full">
-					<CardContent className="flex flex-col items-center p-6">
-						<div className="flex items-center justify-center h-20 w-20 bg-main rounded-xl shadow-lg">
-							<TruckIcon className="text-white w-10 h-10" />
-						</div>
-						<h2 className="text-xl text-main font-semibold py-4 text-center">
-							Shipment
-						</h2>
-						<p className="text-sm text-center">
-							Your shipment will be picked up by our trusted logistic Co.
-						</p>
-					</CardContent>
-				</Card>
+        <div className='mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6'>
+          {features.map((item) => {
+            const Icon = item.icon;
 
-				{/* Card 3: Digitization */}
-				<Card className="bg-normal border-0 ring-0 h-full">
-					<CardContent className="flex flex-col items-center p-6">
-						<div className="flex items-center justify-center h-20 w-20 bg-main rounded-xl shadow-lg">
-							<DigitizationIcon className="text-white w-10 h-10" />
-						</div>
-						<h2 className="text-xl text-main font-semibold py-4 text-center">
-							Digitization
-						</h2>
-						<p className="text-sm text-center">
-							Professional-grade media conversion with private content handled
-							by trained female staff.
-						</p>
-					</CardContent>
-				</Card>
+            return (
+              <Card
+                key={item.title}
+                className='rounded-[16px] border-0 bg-[#ede7e1] shadow-none'>
+                <CardContent className='flex min-h-[190px] flex-col items-center px-5 py-6 text-center'>
+                  <div className='flex h-[48px] w-[48px] items-center justify-center rounded-[6px] bg-[#b6906a]'>
+                    <Icon className='h-6 w-6 text-white stroke-[1.8]' />
+                  </div>
 
-				{/* Card 4: Instant Access */}
-				<Card className="bg-normal border-0 ring-0 h-full">
-					<CardContent className="flex flex-col items-center p-6">
-						<div className="flex items-center justify-center h-20 w-20 bg-main rounded-xl shadow-lg">
-							<CloudUplodCustomIcon className="text-white w-10 h-10" />
-						</div>
-						<h2 className="text-xl text-main font-semibold py-4 text-center">
-							Instant Access
-						</h2>
-						<p className="text-sm text-center">
-							View your digitized memories instantly on our secure cloud.
-						</p>
-					</CardContent>
-				</Card>
+                  <h3 className='mt-5 whitespace-pre-line text-[18px] font-semibold leading-[1.15] text-[#8b6524] md:text-[19px]'>
+                    {item.title}
+                  </h3>
 
-				{/* Card 5: Safely Returned */}
-				<Card className="bg-normal border-0 ring-0 h-full">
-					<CardContent className="flex flex-col items-center p-6">
-						<div className="flex items-center justify-center h-20 w-20 bg-main rounded-xl shadow-lg">
-							<SafelyReturnIcon className="text-white w-10 h-10" />
-						</div>
-						<h2 className="text-xl text-main font-semibold py-4 text-center">
-							Safely Returned
-						</h2>
-						<p className="text-center text-sm">
-							Your original media is returned to you via our tracked truck
-							service.
-						</p>
-					</CardContent>
-				</Card>
-			</div>
-		</section>
-	);
+                  <p className='mt-3 max-w-[185px] text-[13px] leading-[1.45] text-[#3f3a37]'>
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
+        </div>
+
+        <div className='mt-10 flex justify-center'>
+          <button
+            type='button'
+            className='rounded-[6px] bg-[#b6906a] px-7 py-3 text-[16px] font-semibold text-white transition hover:bg-[#a9835f]'>
+            Book Your Free 15-Min Consultation
+          </button>
+        </div>
+      </div>
+    </section>
+  );
 }
