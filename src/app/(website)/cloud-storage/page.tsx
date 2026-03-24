@@ -1,3 +1,4 @@
+import CloudFeatures from '@/components/website/cloud-storage/CloudFeatures';
 import CloudStorageAboutPage from '@/components/website/cloud-storage/CloudStorageAboutPage';
 import CloudStorageBanner from '@/components/website/cloud-storage/CloudStorageBanner';
 import { WebLayout } from '@/components/website/layouts/WebLayout';
@@ -7,6 +8,7 @@ const page = () => {
   <WebLayout>
 <CloudStorageBanner/>
 <CloudStorageAboutPage/>
+<CloudFeatures/>
   </WebLayout>
   );
 };
