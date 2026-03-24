@@ -139,6 +139,9 @@ body {
   .heading {
     @apply text-[#77510A] text-[48px] font-semibold leading-[1.2] 
   }
+  .subtitle{
+    @apply text-lg font-normal leading-[1.5] text-[#3C3C3C] 
+  }
 }
 
 h1 , h2, h3, h4, h5, h6 {
