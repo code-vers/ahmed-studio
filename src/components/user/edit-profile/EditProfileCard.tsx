@@ -35,7 +35,7 @@ export default function EditProfileCard({
 			<div className="flex justify-center mb-6">
 				<div className="relative h-24 w-24">
 					<Image
-						src="/images/users/user-avatar.png"
+						src="/images/users/user11.jpg"
 						alt="avatar"
 						fill
 						className="rounded-full object-cover"
