@@ -40,7 +40,7 @@ export default function Navbar() {
 				</button>
 				<button className="w-9 h-9 rounded-full overflow-hidden border-2 border-gray-200 hover:border-[#8B2C1A] transition-colors">
 					<Image
-						src="/images/users/user-avatar.png"
+						src="/images/users/user11.jpg"
 						alt="User avatar"
 						width={36}
 						height={36}
