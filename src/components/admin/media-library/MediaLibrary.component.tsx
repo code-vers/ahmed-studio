@@ -7,7 +7,7 @@ export default function MediaLibraryComponent() {
 	return (
 		<section className="w-full pb-6 min-h-screen">
 			{/* Title */}
-      <h2 className="text-3xl font-normal pb-2">Media Library</h2>
+			<h2 className="text-3xl font-normal pb-2">Media Library</h2>
 			{/* ================= Stats Cards ================= */}
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-6">
 				{["Photos", "Videos", "Audios"].map((item) => (
@@ -15,7 +15,9 @@ export default function MediaLibraryComponent() {
 						key={item}
 						className="bg-white border border-[#caa57b] rounded-xl p-8"
 					>
-						<p className="text-lg mb-2 flex "><ImageIcon className="mr-2"/> {item}</p>
+						<p className="text-lg mb-2 flex ">
+							<ImageIcon className="mr-2" /> {item}
+						</p>
 						<h3 className="text-3xl font-normal py-4">124,567</h3>
 						<span className="text-lg">3.1 TB</span>
 					</div>
