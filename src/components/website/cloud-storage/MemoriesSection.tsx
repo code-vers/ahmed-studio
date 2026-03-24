@@ -3,13 +3,13 @@ import films from "../../../../public/images/website/cloud-storage/memories.jpg"
 
 const MemoriesSection = () => {
   return (
-    <section className="bg-[#e9e1d8] py-16 mt-16 px-4">
+    <section className=" py-16 mt-16 px-4">
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row-reverse items-center">
           
           {/* Left Image */}
           <div className="md:w-1/2 w-full">
-            <div className="border-2  p-1">
+            <div className=" p-1">
               <Image
                 src={films}
                 alt="films"
@@ -20,7 +20,7 @@ const MemoriesSection = () => {
 
           {/* Right Content */}
           <div className="md:w-1/2 w-full md:pl-12 mt-8 md:mt-0">
-            <div className="border-2 p-8">
+            <div className=" p-8">
               
               <h2 className="heading mb-4">
 Memories are <br />
