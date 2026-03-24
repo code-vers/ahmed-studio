@@ -29,7 +29,7 @@ export default function Content() {
         {/* Text Content Container */}
         <div className='w-full md:flex-1 text-center md:text-left'>
           <h2 className='text-3xl sm:text-4xl lg:text-6xl text-main font-semibold leading-tight'>
-            One of the region's most
+            One of the region&apos;s most
           </h2>
 
           <p className='py-5 md:py-7 text-base md:text-lg text-justify md:text-left leading-relaxed'>

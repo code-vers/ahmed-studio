@@ -26,7 +26,7 @@ const features = [
 
 export default function WhyAhmedStudioConsulting() {
   return (
-    <section className='w-full bg-[#f6f4f1] py-14 md:py-16'>
+    <section className='w-full py-14 md:py-16'>
       <div className='mx-auto w-[90%] max-w-[1120px]'>
         <h2 className='text-center text-[28px] font-semibold leading-tight text-[#8b6524] md:text-[40px]'>
           Why Ahmed Studio Consulting?
