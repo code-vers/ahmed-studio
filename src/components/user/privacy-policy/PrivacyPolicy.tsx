@@ -1,6 +1,6 @@
 export default function PrivacyPolicy() {
 	return (
-		<section className="w-full">
+		<section className="w-full px-6">
 			<div className="w-[85%] mx-auto">
                 <h2 className="text-3xl font-medium pb-4">Privacy Policy</h2>
 				<div className="w-full bg-[#fff8e4] text-[#4c4a4c] rounded-xl">

@@ -29,7 +29,7 @@ export default function otpVerify() {
 					<div className="line w-8 h-2 bg-secondary rounded-xl"></div>
 					<div className="line w-8 h-2 bg-secondary rounded-xl"></div>
 					<div className="line w-8 h-2 bg-secondary rounded-xl"></div>
-					<div className="line w-8 h-2 bg-ma rounded-xl"></div>
+					<div className="line w-8 h-2 bg-main rounded-xl"></div>
 					<div className="line w-8 h-2 bg-secondary rounded-xl"></div>
 					<div className="line w-8 h-2 bg-secondary rounded-xl"></div>
 				</div>
@@ -87,6 +87,7 @@ export default function otpVerify() {
 
 						<button
 							type="submit"
+							onClick={() => (window.location.href = "new-password")}
 							className="w-full bg-main text-white py-3 px-4 rounded-md hover:bg-main/80 focus:outline-none focus:ring focus:ring-main focus:ring-opacity-50 cursor-pointer"
 						>
 							Verify

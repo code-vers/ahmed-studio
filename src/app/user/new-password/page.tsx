@@ -87,6 +87,7 @@ export default function NewPassword() {
 						
 						<button
 							type="submit"
+							onClick={() => (window.location.href = "create-profile")}
 							className="w-full bg-main text-white py-3 px-4 rounded-md hover:bg-main/80 focus:outline-none focus:ring focus:ring-main focus:ring-opacity-50 cursor-pointer">
 							Continue
 						</button>

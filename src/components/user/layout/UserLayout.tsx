@@ -15,7 +15,7 @@ export default function UserLayout({ children, pageTitle }: UserLayoutProps) {
 			<Navbar />
 
 			{/* Page Content */}
-			<main className=" px-6 py-6 w-full">
+			<main className=" w-full">
 				{children}
 			</main>
 		</div>
