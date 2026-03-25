@@ -1,4 +1,4 @@
-"use client";
+
 
 interface LogoutConfirmationProps {
 	onCancel: () => void;
@@ -10,7 +10,7 @@ export default function LogoutConfirmation({
 	onConfirm,
 }: LogoutConfirmationProps) {
 	return (
-		<div className="w-[85%] mx-auto">
+		<div className="w-[85%] mx-auto p-6">
 			{/* Title */}
 			<h2 className="text-3xl font-normal pb-8">Logout</h2>
             
