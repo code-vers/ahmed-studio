@@ -43,7 +43,7 @@ const CategoryNav = () => {
 
 	const handleBuyNow = () => {
 		setShowDialog(false);
-		router.push("user/subscription"); // adjust tp your route
+		router.push("/user/subscription"); // adjust tp your route
 	};
 
 	return (

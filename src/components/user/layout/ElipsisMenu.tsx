@@ -45,7 +45,7 @@ export default function EllipsisMenu() {
 			{/* Trigger button */}
 			<button
 				onClick={() => setOpen((v) => !v)}
-				className="text-gray-500 hover:text-gray-700 transition-colors p-1"
+				className="text-gray-500 hover:text-gray-700 hover:cursor-pointer transition-colors p-1"
 				aria-label="More options"
 			>
 				<EllipsisVertical className="w-5 h-5" />
@@ -58,7 +58,7 @@ export default function EllipsisMenu() {
 					<div className="px-4 py-3 space-y-1">
 						<button
 							onClick={handleHelp}
-							className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50 transition-colors text-[15px]"
+							className="w-full flex items-center gap-3 px-3 py-3 rounded-md text-gray-800 hover:bg-gray-300 transition-colors text-[15px]"
 						>
 							<HelpCircle className="w-5 h-5 text-gray-700" strokeWidth={1.8} />
 							Help & Support
@@ -66,7 +66,7 @@ export default function EllipsisMenu() {
 
 						<button
 							onClick={handleSettings}
-							className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50 transition-colors text-[15px]"
+							className="w-full flex items-center gap-3 px-3 py-3 rounded-md text-gray-800 hover:bg-gray-300 transition-colors text-[15px]"
 						>
 							<Settings className="w-5 h-5 text-gray-700" strokeWidth={1.8} />
 							Settings
@@ -74,7 +74,7 @@ export default function EllipsisMenu() {
 
 						<button
 							onClick={handleLogout}
-							className="w-full flex items-center gap-3 px-3 py-3 rounded-lg text-gray-800 hover:bg-gray-50 transition-colors text-[15px]"
+							className="w-full flex items-center gap-3 px-3 py-3 rounded-md text-gray-800 hover:bg-gray-300 transition-colors text-[15px]"
 						>
 							<LogOut className="w-5 h-5 text-gray-700" strokeWidth={1.8} />
 							Log out
