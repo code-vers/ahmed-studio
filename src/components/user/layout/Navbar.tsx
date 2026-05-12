@@ -1,8 +1,9 @@
 "use client";
 
-import { Search, MoreVertical } from "lucide-react";
+import { Search } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
+import EllipsisMenu from "./ElipsisMenu";
 
 export default function Navbar() {
 	const [searchQuery, setSearchQuery] = useState("");
@@ -35,9 +36,8 @@ export default function Navbar() {
 
 			{/* Right Actions */}
 			<div className="flex items-center gap-3">
-				<button className="text-gray-500 hover:text-gray-700 transition-colors p-1">
-					<MoreVertical className="w-5 h-5" />
-				</button>
+				<EllipsisMenu />
+
 				<button className="w-9 h-9 rounded-full overflow-hidden border-2 border-gray-200 hover:border-[#8B2C1A] transition-colors">
 					<Image
 						src="/images/users/user11.jpg"

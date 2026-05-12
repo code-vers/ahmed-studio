@@ -1,50 +1,44 @@
-import Image from "next/image";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaLinkedinIn,
-  FaWhatsapp,
-} from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 
 const quickLinks = [
-  "Home",
-  "How To Order",
-  "Consultant",
-  "Cloud Storage",
-  "Differences",
-  "About Us",
+  { name: 'Home', href: '/' },
+  { name: 'How To Order', href: '/order' },
+  { name: 'Consultant', href: '/consultant' },
+  { name: 'Cloud Storage', href: '/cloud-storage' },
+  { name: 'About Us', href: '/about-us' },
 ];
 
 const resources = [
-  "AI Tools",
-  "Our LAB",
-  "Subscription",
-  "Privacy Policy",
-  "Terms of Service",
+  { name: 'AI Tools', href: '/ai-tools' },
+  { name: 'Our LAB', href: '/our-lab' },
+  { name: 'Subscription', href: '/subscription' },
+  { name: 'Privacy Policy', href: '#' },
+  { name: 'Terms of Service', href: '#' },
 ];
 
 const socialIcons = [
-  { name: "facebook", icon: FaFacebookF, href: "#" },
-  { name: "linkedin", icon: FaLinkedinIn, href: "#" },
-  { name: "instagram", icon: FaInstagram, href: "#" },
-  { name: "x", icon: FaXTwitter, href: "#" },
-  { name: "whatsapp", icon: FaWhatsapp, href: "#" },
+  { name: 'facebook', icon: FaFacebookF, href: '#' },
+  { name: 'linkedin', icon: FaLinkedinIn, href: '#' },
+  { name: 'instagram', icon: FaInstagram, href: '#' },
+  { name: 'x', icon: FaXTwitter, href: '#' },
+  { name: 'whatsapp', icon: FaWhatsapp, href: '#' },
 ];
 
 const paymentIcons = [
-  { name: "apple-pay", src: "/images/footer/a.png" },
-  { name: "visa", src: "/images/footer/b.png" },
-  { name: "mastercard-text", src: "/images/footer/c.png" },
-  { name: "stc", src: "/images/footer/d.png" },
-  { name: "bank", src: "/images/footer/e.png" },
-  { name: "paypal", src: "/images/footer/f.png" },
-  { name: "tabby", src: "/images/footer/g.png" },
-  { name: "tamara", src: "/images/footer/h.png" },
-  { name: "mada", src: "/images/footer/i.png" },
-  { name: "mastercard", src: "/images/footer/j.png" },
+  { name: 'apple-pay', src: '/images/footer/a.png' },
+  { name: 'visa', src: '/images/footer/b.png' },
+  { name: 'mastercard-text', src: '/images/footer/c.png' },
+  { name: 'stc', src: '/images/footer/d.png' },
+  { name: 'bank', src: '/images/footer/e.png' },
+  { name: 'paypal', src: '/images/footer/f.png' },
+  { name: 'tabby', src: '/images/footer/g.png' },
+  { name: 'tamara', src: '/images/footer/h.png' },
+  { name: 'mada', src: '/images/footer/i.png' },
+  { name: 'mastercard', src: '/images/footer/j.png' },
 ];
 
 export default function Footer() {
@@ -78,11 +72,12 @@ export default function Footer() {
 
             <ul className='space-y-[10px]'>
               {quickLinks.map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href='#'
-                    className='text-[12px] font-normal leading-[1.25] text-white/95 transition-opacity duration-200 hover:opacity-80'>
-                    {item}
+                    href={item.href}
+                    className='text-[12px] font-normal leading-[1.25] text-white/95 transition-opacity duration-200 hover:opacity-80'
+                  >
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -97,12 +92,8 @@ export default function Footer() {
 
             <ul className='space-y-[10px]'>
               {resources.map((item) => (
-                <li key={item}>
-                  <Link
-                    href='#'
-                    className='text-[12px] font-normal leading-[1.25] text-white/95 transition-opacity duration-200 hover:opacity-80'>
-                    {item}
-                  </Link>
+                <li key={item.name}>
+                  <Link href={item.href}>{item.name}</Link>
                 </li>
               ))}
             </ul>
@@ -122,7 +113,8 @@ export default function Footer() {
                     key={item.name}
                     href={item.href}
                     className='flex h-[22px] w-[22px] items-center justify-center rounded-[2px] bg-white text-[#2F2F2F] hover:opacity-85'
-                    aria-label={item.name}>
+                    aria-label={item.name}
+                  >
                     <Icon size={12} />
                   </Link>
                 );
@@ -131,12 +123,10 @@ export default function Footer() {
 
             <div className='space-y-[10px] text-[12px] leading-[1.28] text-white/95'>
               <p>
-                <span className='font-semibold'>Phone Number:</span> +966 50 023
-                8627
+                <span className='font-semibold'>Phone Number:</span> +966 50 023 8627
               </p>
               <p>
-                <span className='font-semibold'>Email:</span>{" "}
-                old-to-new@hotmail.com
+                <span className='font-semibold'>Email:</span> old-to-new@hotmail.com
               </p>
               <p className='max-w-[265px] mx-auto md:mx-0 leading-[1.2]'>
                 Inquiries: Support for individuals and organizations.
@@ -150,7 +140,8 @@ export default function Footer() {
           {paymentIcons.map((item) => (
             <div
               key={item.name}
-              className='relative flex items-center justify-center rounded-[3px] px-[6px]'>
+              className='relative flex items-center justify-center rounded-[3px] px-[6px]'
+            >
               <Image
                 src={item.src}
                 alt={item.name}
